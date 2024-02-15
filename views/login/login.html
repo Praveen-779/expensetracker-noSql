@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Login </title>
+</head>
+<body style="text-align: center; background-color: aliceblue;">
+    <form  onsubmit="login(event)" mathod="POST" id="loginForm" style="background-color: antiquewhite;">
+        <label for="email">Enter Your  Email</label><br>
+        <input type="email" name="email" id="email"><br><br>
+        <label for="password">Password</label><br>
+        <input type="password" name="password" id="password"><br><br>
+        <button type="submit">Login</button>
+    </form>
+    <a href="../signup/signup.html" style="background-color: rgb(152, 185, 166); ">New User SignUp</a><br>
+    <a href="../forget-password/forgetpassword.html" style="background-color: rgb(152, 185, 166); ">Forget Password</a>
+    <div id="errorMessage" style="color: red;"></div>
+    <script src="./login.js"> </script>
+</body>
+
+</html>

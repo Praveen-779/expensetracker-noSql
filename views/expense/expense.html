@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Expenses</title>
+</head>
+<style>
+    
+</style>
+
+<body>
+    <form onsubmit="addExpense(event)" method="POST" id="expenseForm" style="text-align: center;">
+        <label for="amount">Enter expense amount</label>
+        <input type="number" name="amount" id="amount">
+
+        <label for="description">choose Description</label>
+        <input type="text" name="description" id="description">
+
+        <label for="category">choose a category</label>
+        <select name="category" id="category">
+            <option value="food">Food</option>
+            <option value="petrol">Petrol</option>
+            <option value="fuel">Fuel</option>
+            <option value="electricity">Electricity</option>
+        </select>
+        <button type="submit" style="background-color:rgb(171, 171, 151);">Add Expense</button>
+    </form>
+    <div id="premium">
+        <button id="rzp-button1">Buy Premium</button>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    </div>
+    <br>
+    <div id="choosesize">
+        <form id="pagesize" onsubmit="savePageSize(event)">
+            <label for="itemsperpage">Select Rows Per Page</label>
+            <select id="itemsperpage" name="itemsperpage" style="background-color:rgb(15, 229, 179);">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+            </select>
+            <button style="background-color:rgb(241, 241, 20); ">save</button>
+        </form>
+    </div> <br>
+   
+    <div id="display">
+
+    </div>
+    <div id="pagination" style="text-align: center;">
+        
+    </div>
+    <div id="leaderboard" >
+        
+    </div>
+    <div id="downloadedfiles">
+        
+    </div>
+
+</body>
+<script src="./expense.js"> </script>
+
+</html>
